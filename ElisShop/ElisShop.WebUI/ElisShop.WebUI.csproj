@@ -193,6 +193,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -294,6 +295,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,6 +313,24 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElisShop.Core\ElisShop.Core.csproj">
+      <Project>{deff906b-5e9b-4614-8f3d-30d020c70ed1}</Project>
+      <Name>ElisShop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElisShop.DataAccess.InMemory\ElisShop.DataAccess.InMemory.csproj">
+      <Project>{38c0fc9b-39d5-464b-8029-186d9bd0613e}</Project>
+      <Name>ElisShop.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElisShop.DataAccess.SQL\ElisShop.DataAccess.SQL.csproj">
+      <Project>{e1501b4f-87b1-4a3c-8580-36ff84a1e961}</Project>
+      <Name>ElisShop.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElisShop.Services\ElisShop.Services.csproj">
+      <Project>{8fb3a858-e43e-40cd-b65b-79b266e19e73}</Project>
+      <Name>ElisShop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

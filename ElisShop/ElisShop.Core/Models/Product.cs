@@ -11,8 +11,7 @@ namespace ElisShop.Core.Models
     public class Product
     {
         public string Id { get; set; }
-        [Required]
-        [Range(0, 1000)]
+        [Required] 
         [StringLength(20)]
         [DisplayName("Product Name")]
         public string Name { get; set; }
@@ -21,15 +20,11 @@ namespace ElisShop.Core.Models
         public decimal Price { get; set; }
         public string Category { get; set; }
         public string Image { get; set; }
-        [Range(0, 100)]
-        public double Weight { get; set; }
+        
 
         public Product()
         {
             this.Id = Guid.NewGuid().ToString();
         }
     }
-
-
-    
 }

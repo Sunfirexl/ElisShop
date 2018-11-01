@@ -15,7 +15,7 @@ namespace ElisShop.DataAccess.InMemory
 
         public ProductRepository()
         {
-            products = cache["products"] as List<Product>;
+            products = cache["Products"] as List<Product>;
             if (products == null)
             {
                 products = new List<Product>();
@@ -30,7 +30,7 @@ namespace ElisShop.DataAccess.InMemory
             cache["Products"] = products;
         }
 
-        public void Instert(Product p)
+        public void Insert(Product p)
         {
             products.Add(p);
         }
